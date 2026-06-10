@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FragFest 2025 — Esports Tournament Registration</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-inner">
+        <div class="hero-badge">⚡ Registration Open</div>
+        <h1 class="hero-title">FRAG<span class="accent">FEST</span> 2025</h1>
+        <p class="hero-subtitle">Annual Esports Championship — Compete. Conquer. Claim Glory.</p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-value">$5,000</span>
+            <span class="stat-label">Prize Pool</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">32</span>
+            <span class="stat-label">Team Slots</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">Aug 15</span>
+            <span class="stat-label">Start Date</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">5v5</span>
+            <span class="stat-label">Format</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- INFO CARDS -->
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">🗓️</div>
+            <div class="info-content">
+              <h3>Tournament Dates</h3>
+              <p>August 15–17, 2025</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🏆</div>
+            <div class="info-content">
+              <h3>Prize Pool</h3>
+              <p>$5,000 Total Payout</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🎮</div>
+            <div class="info-content">
+              <h3>Format</h3>
+              <p>Double Elimination Bracket</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Venue</h3>
+              <p>Online + LAN Grand Finals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN FORM -->
+    <main class="container form-container">
+      <div class="form-card">
+
+        <div class="form-header">
+          <div class="form-header-text">
+            <h2>Team Registration</h2>
+            <p>Secure your slot — all fields marked * are required</p>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label"><span id="progress-count">0</span>/7 Players</div>
+            <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+          </div>
+        </div>
+
+        <!-- ALERTS -->
+        <div id="success-message" class="alert alert-success hidden">
+          <span class="alert-icon">✅</span>
+          <div>
+            <strong>Registration Successful!</strong>
+            <p>Your team has been registered. We'll be in touch shortly.</p>
+          </div>
+        </div>
+        <div id="error-message" class="alert alert-error hidden">
+          <span class="alert-icon">⚠️</span>
+          <div>
+            <strong>Submission Failed</strong>
+            <p>Something went wrong. Please check your details and try again.</p>
+          </div>
+        </div>
+
+        <form id="registration-form" novalidate>
+
+          <!-- CAPTAIN BLOCK -->
+          <div class="player-block captain-block" data-player="1">
+            <div class="block-header">
+              <div class="block-label captain-label">
+                <span class="block-icon">👑</span>
+                <span>Team Captain</span>
+                <span class="tag tag-captain">Player 1</span>
+              </div>
+              <div class="block-indicator" id="indicator-captain"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="full-name">Full Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="full-name" name="full_name" placeholder="e.g. Alex Johnson" required autocomplete="name" />
+                  <span class="input-check" id="check-full-name"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <div class="input-wrap">
+                  <input type="email" id="email" name="email" placeholder="e.g. alex@email.com" required autocomplete="email" />
+                  <span class="input-check" id="check-email"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <div class="input-wrap">
+                  <input type="tel" id="phone" name="phone" placeholder="e.g. +65 9123 4567" required autocomplete="tel" />
+                  <span class="input-check" id="check-phone"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="team-name">Team Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="team-name" name="team_name" placeholder="e.g. Shadow Wolves" required />
+                  <span class="input-check" id="check-team-name"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="game-username">Game Account / Player Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="game-username" name="game_username" placeholder="e.g. ShadowWolf99" required />
+                  <span class="input-check" id="check-game-username"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="game-id">Game ID *</label>
+                <div class="input-wrap">
+                  <input type="text" id="game-id" name="game_id" placeholder="e.g. #12345" required />
+                  <span class="input-check" id="check-game-id"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROSTER LABEL -->
+          <div class="section-divider">
+            <span>Main Roster — Players 2 to 5</span>
+          </div>
+
+          <!-- PLAYER 2 -->
+          <div class="player-block" data-player="2">
+            <div class="block-header">
+              <div class="block-label">
+                <span class="block-icon">🎮</span>
+                <span>Player 2</span>
+                <span class="tag tag-roster">Main Roster</span>
+              </div>
+              <div class="block-indicator" id="indicator-p2"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p2-username">Game Account / Player Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p2-username" name="p2_username" placeholder="e.g. NightHawk22" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p2-id">Game ID *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p2-id" name="p2_id" placeholder="e.g. #67890" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER 3 -->
+          <div class="player-block" data-player="3">
+            <div class="block-header">
+              <div class="block-label">
+                <span class="block-icon">🎮</span>
+                <span>Player 3</span>
+                <span class="tag tag-roster">Main Roster</span>
+              </div>
+              <div class="block-indicator" id="indicator-p3"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p3-username">Game Account / Player Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p3-username" name="p3_username" placeholder="e.g. IronFist55" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p3-id">Game ID *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p3-id" name="p3_id" placeholder="e.g. #11223" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER 4 -->
+          <div class="player-block" data-player="4">
+            <div class="block-header">
+              <div class="block-label">
+                <span class="block-icon">🎮</span>
+                <span>Player 4</span>
+                <span class="tag tag-roster">Main Roster</span>
+              </div>
+              <div class="block-indicator" id="indicator-p4"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p4-username">Game Account / Player Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p4-username" name="p4_username" placeholder="e.g. BladeRunner7" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p4-id">Game ID *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p4-id" name="p4_id" placeholder="e.g. #44556" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER 5 -->
+          <div class="player-block" data-player="5">
+            <div class="block-header">
+              <div class="block-label">
+                <span class="block-icon">🎮</span>
+                <span>Player 5</span>
+                <span class="tag tag-roster">Main Roster</span>
+              </div>
+              <div class="block-indicator" id="indicator-p5"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p5-username">Game Account / Player Name *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p5-username" name="p5_username" placeholder="e.g. StormBreaker" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p5-id">Game ID *</label>
+                <div class="input-wrap">
+                  <input type="text" id="p5-id" name="p5_id" placeholder="e.g. #77889" required />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBSTITUTE LABEL -->
+          <div class="section-divider">
+            <span>Substitutes — Optional</span>
+          </div>
+
+          <!-- PLAYER 6 -->
+          <div class="player-block sub-block" data-player="6">
+            <div class="block-header">
+              <div class="block-label">
+                <span class="block-icon">🔄</span>
+                <span>Player 6</span>
+                <span class="tag tag-sub">Substitute</span>
+              </div>
+              <div class="block-indicator" id="indicator-p6"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p6-username">Game Account / Player Name <span class="opt-label">(Optional)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="p6-username" name="p6_username" placeholder="e.g. PhantomX" />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p6-id">Game ID <span class="opt-label">(Optional)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="p6-id" name="p6_id" placeholder="e.g. #99001" />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER 7 -->
+          <div class="player-block sub-block" data-player="7">
+            <div class="block-header">
+              <div class="block-label">
+                <span class="block-icon">🔄</span>
+                <span>Player 7</span>
+                <span class="tag tag-sub">Substitute</span>
+              </div>
+              <div class="block-indicator" id="indicator-p7"></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p7-username">Game Account / Player Name <span class="opt-label">(Optional)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="p7-username" name="p7_username" placeholder="e.g. GhostMode" />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="p7-id">Game ID <span class="opt-label">(Optional)</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="p7-id" name="p7_id" placeholder="e.g. #22334" />
+                  <span class="input-check"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" id="submit-btn" class="submit-btn">
+            <span id="btn-text">⚔️ Register Team Now</span>
+            <span id="btn-loading" class="hidden">
+              <span class="spinner"></span> Submitting…
+            </span>
+          </button>
+
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 FragFest Esports. All rights reserved. &nbsp;·&nbsp; <a href="#">Rules & Eligibility</a> &nbsp;·&nbsp; <a href="#">Contact Us</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
