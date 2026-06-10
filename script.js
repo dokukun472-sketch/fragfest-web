@@ -1,8 +1,8 @@
 // =============================================
 // CONFIG — Replace with your Supabase keys
 // =============================================
-const SUPABASE_URL     = 'YOUR_SUPABASE_URL_HERE';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE';
+const SUPABASE_URL     = 'https://seqgsjpjhwdaftiabkpg.supabase.co/rest/v1/';
+const SUPABASE_ANON_KEY = 'sb_publishable_Y0TcR5Nf36b2t3_nBpFS5g_CPfyU5f1';
 
 // =============================================
 // ELEMENT REFERENCES
