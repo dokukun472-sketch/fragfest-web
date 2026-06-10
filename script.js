@@ -1,7 +1,7 @@
 // =============================================
 // CONFIG — Replace with your Supabase keys
 // =============================================
-const SUPABASE_URL     = 'https://seqgsjpjhwdaftiabkpg.supabase.co/rest/v1/';
+const SUPABASE_URL = 'https://seqgsjpjhwdaftiabkpg.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlcWdzanBqaHdkYWZ0aWFia3BnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwNzM1ODUsImV4cCI6MjA5NjY0OTU4NX0.m9R7QdRZ_rNpYVElphuBKMbmuJUTlpil8kuHGl0bZ10';
 
 // =============================================
